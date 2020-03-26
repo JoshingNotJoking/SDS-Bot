@@ -1,4 +1,4 @@
-getNewestVersion = loadstring(httpGet(https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"))
+getNewestVersion = loadstring("httpGet(https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"))
 latestVersion = getNewestVersion()
 currentVersion = dofile(localPath .."/lib/version.lua")
 print (currentVersion)
