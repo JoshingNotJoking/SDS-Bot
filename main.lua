@@ -2,6 +2,7 @@
 getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"))
 latestVersion = getNewestVersion()
 currentVersion = dofile(scriptPath() .."/lib/version.lua")
+setImagePath(localPath .. "1280x720")
 
 function automaticUpdates ()
   if currentVersion == latestVersion then
