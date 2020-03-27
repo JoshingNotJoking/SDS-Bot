@@ -17,6 +17,7 @@ function automaticUpdates ()
     httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua", localPath .."/lib/version.lua")
     httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/regions.lua", localPath .."/lib/regions.lua")
     httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/imageupdater.lua", localPath .."imageupdater.lua")
+    httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/snapyourscript.lua", localPath .."snapyourscript.lua")
     scriptExit("You have Updated SinBot!")
   end
 end
