@@ -3,7 +3,11 @@ localPath = scriptPath()
 getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"))
 latestVersion = getNewestVersion()
 currentVersion = dofile(localPath .."/lib/version.lua")
-setImagePath(localPath .. "1280x720")
+imgPath = localPath .. "image/1280x720"
+setImagePath(imgPath)
+Settings:set("MinSimilarity", 0.90)
+
+dofile(localPath .. "lib/regions.lua")
 
 function automaticUpdates ()
   if currentVersion == latestVersion then
@@ -18,12 +22,11 @@ function automaticUpdates ()
 end
 
 
-automaticUpdates ();
+-- automaticUpdates ();
+
+
 
 -- Just an example to learn how clicking works. I don't think this is efficient because it's searching the entire screen.
 while true do
-  if existsClick(Pattern("areaTavern.png")) then
-    toast ("It worked!")
-    wait(8);
-  end
+  existsClick(Pattern("areaTavern.png"));
 end
