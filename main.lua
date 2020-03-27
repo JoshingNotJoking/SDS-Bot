@@ -5,7 +5,7 @@ latestVersion = getNewestVersion()
 currentVersion = dofile(localPath .."/lib/version.lua")
 imgPath = localPath .. "image/1280x720"
 setImagePath(imgPath)
-Settings:set("MinSimilarity", 0.90)
+
 
 dofile(localPath .. "lib/regions.lua")
 
@@ -17,17 +17,20 @@ function automaticUpdates ()
     httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua", localPath .."/lib/version.lua")
     httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/regions.lua", localPath .."/lib/regions.lua")
     httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/imageupdater.lua", localPath .."imageupdater.lua")
-    httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/snapyourscript.lua", localPath .."snapyourscript.lua")
     scriptExit("You have Updated SinBot!")
   end
 end
 
+function gearFarm ()
+  if existsClick(Pattern("areaTavern.png")) then
+    toast ("Found it!");
+    wait(3);
+  end
+end
 
--- automaticUpdates ();
 
+automaticUpdates ();
 
-
--- Just an example to learn how clicking works. I don't think this is efficient because it's searching the entire screen.
 while true do
-  existsClick(Pattern("areaTavern.png"));
+  gearFarm ();
 end
