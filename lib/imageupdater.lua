@@ -1,3 +1,8 @@
+-- ========================
+-- Image Updater
+-- ========================
+-- Credit to Palbot for the implementation: https://github.com/Paladiex/Palbot
+
 localPath = scriptPath()
 imagePath = (localPath .. "image/1280x720/")
 
