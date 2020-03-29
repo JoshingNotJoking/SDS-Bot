@@ -5,26 +5,38 @@
 -- Credit to Palbot & Swar-X for implementation and structure inspiration.
 
 -- Basic Configuration
-localPath = scriptPath()
-getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"))
-latestVersion = getNewestVersion()
-currentVersion = dofile(localPath .."/lib/version.lua")
+localPath = scriptPath();
+getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"));
+latestVersion = getNewestVersion();
+currentVersion = dofile(localPath .."/lib/version.lua");
 imgPath = localPath .. "image/1280x720"
-setImagePath(imgPath)
+setImagePath(imgPath);
 
--- Script Updater
+-- Load user prompts
+dofile(localPath .. "lib/dialogs/gui.lua");
+
+-- Check if there are updates to the script
 function automaticUpdates ()
   if currentVersion == latestVersion then
-    toast ("SinBot is up to date!")
+    toast ("SinBot is up to date!");
   else
-    dofile(localPath .. "setup.lua")
+    updatePrompt();
+    if choice == 1 then -- GUI for gear farming
+        dofile(localPath .. "setup.lua");
+    else
+        toast ("You'll be reminded to update on next launch.")
+    end
   end
 end
 
+automaticUpdates ();
+
 -- Load helpers & functions (This may be expensive for the interpreter)
-dofile(localPath .. "lib/regions.lua")
-dofile(localPath .. "lib/gearFarm.lua")
-dofile(localPath .. "lib/dialogs/gui.lua")
+dofile(localPath .. "lib/regions.lua");
+dofile(localPath .. "lib/gearFarm.lua");
+
+-- Ask what user wants to do
+introPrompt ();
 
 if gearSelection == 1 then gearSelection = "gearAttack"
 elseif gearSelection == 2 then gearSelection = "gearDefense"
@@ -68,9 +80,6 @@ function gearSalvage ()
     end
   until salvageMissingEquip:exists(Pattern("salvageMissingEquip.png"));
 end
-
--- Check if there are updates to the script
-automaticUpdates ();
 
 while true do
   gearFarm ();
