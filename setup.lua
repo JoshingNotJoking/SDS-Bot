@@ -4,7 +4,8 @@ setImagePath(imgPath)
 
 dialogInit()
 -- GUI
-addTextView("  ") addTextView("Please create the following directories before running this scrip:") newRow()
+addTextView("  ") addTextView("Network Functions in Ankulua settings must be enabled for this to work") newRow()
+addTextView("  ") addTextView("Create the following directories before running this script:") newRow()
 addTextView("  ") addTextView("- image") newRow()
 addTextView("  ") addTextView("- image/1280x720") newRow()
 addTextView("  ") addTextView("- lib") newRow()
@@ -26,3 +27,5 @@ function assetSetup ()
   dofile(localPath .. "imageupdater.lua")
   scriptExit("Scripts assets downloaded!")
 end
+
+assetSetup ()
