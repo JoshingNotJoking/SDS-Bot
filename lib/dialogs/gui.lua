@@ -34,7 +34,7 @@ function gearFarmPrompt ()
   end
 
   addTextView("Salvage Gear When Full?")newRow()
-  addCheckBox("gearCommon", "Common ", true) addCheckBox("gearUncommon", "Uncommon", true) addCheckBox("gearRare", "Rare", true) addCheckBox("gearSuperRare", "Super Rare", false)
+  addCheckBox("gearCommon", "Common ", true) addCheckBox("gearUncommon", "Uncommon", true) addCheckBox("gearRare", "Rare", true) addCheckBox("gearSuperRare", "Super Rare", true)
 
   dialogShow("Gear Farm Options")
 end
