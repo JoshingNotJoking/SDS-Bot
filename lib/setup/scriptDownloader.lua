@@ -13,7 +13,6 @@ function downloadScripts()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/regions.lua", localPath .."/lib/regions.lua");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/gearSalvage.lua", localPath .."/lib/gearSalvage.lua");
   -- /lib/dialogs
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/dialogs/gearFarm.lua", localPath .."/lib/dialogs/gearFarm.lua");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/dialogs/gui.lua", localPath .."/lib/dialogs/gui.lua");
   -- /lib/setup
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/version.lua", localPath .."/lib/setup/version.lua");
