@@ -11,18 +11,18 @@ dialogShow("Important")
 function assetSetup ()
   -- Make any directories that are missing
   toast ("Creating missing directories (if any)");
-  local directories = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/directoryCreator.lua"))
+  local directories = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/directoryCreator.lua"));
   directories ();
 
   -- Download Scripts
   toast ("Downloading Scripts");
-  local scripts = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownloader.lua"))
+  local scripts = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownloader.lua"));
   scripts ();
   toast ("Scripts Downloaded");
 
   -- Download images
   toast ("Downloading Images", 3);
-  local images = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownloader.lua"))
+  local images = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownloader.lua"));
   images ();
   toast ("Images Downloaded");
 
