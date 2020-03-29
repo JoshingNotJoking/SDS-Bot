@@ -1,0 +1,3 @@
+function guildBossHard ()
+
+end

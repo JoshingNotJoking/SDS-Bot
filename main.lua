@@ -16,7 +16,7 @@ setImagePath(imgPath);
 dofile(localPath .. "lib/dialogs/gui.lua");
 
 -- Check if there are updates to the script
-function automaticUpdates ()
+function automaticUpdates()
   if currentVersion == latestVersion then
     toast ("SinBot is up to date!");
   else
@@ -29,20 +29,20 @@ function automaticUpdates ()
   end
 end
 
-automaticUpdates ();
+automaticUpdates();
 
 -- Load helpers & functions (This may be expensive for the interpreter, refactor later)
 dofile(localPath .. "lib/regions.lua");
-dofile(localPath .. "lib/gearFarm.lua");
-dofile(localPath .. "lib/gearSalvage.lua");
 
 -- Ask what user wants to do this session
-introPrompt ();
+introPrompt();
 
 if session == 1 then
-  gearFarmPrompt ();
+  gearFarmPrompt();
+  dofile(localPath .. "lib/gearFarm.lua");
+  dofile(localPath .. "lib/gearSalvage.lua");
   while true do
-    gearFarm ();
+    gearFarm();
     -- Clear inventory to continue farming
     if areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png")) then
       toast ("Equipment inventory full!");
@@ -56,8 +56,11 @@ if session == 1 then
 end
 
 if session == 2 then
-  guildBossPrompt ();
+  guildBossPrompt();
+  dofile(localPath .. "lib/guildBoss.lua");
   if bossDifficulty == 1 then
-    scriptExit("Coming Soon!");
+    while true do
+      guildBossHard();
+    end
   end
 end
