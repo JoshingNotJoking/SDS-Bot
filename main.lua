@@ -9,7 +9,7 @@ localPath = scriptPath();
 getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"));
 latestVersion = getNewestVersion();
 currentVersion = dofile(localPath .."/lib/version.lua");
-imgPath = localPath .. "image/1280x720"
+imgPath = localPath .. "images/1280x720"
 setImagePath(imgPath);
 
 -- Load user prompts
