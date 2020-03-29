@@ -10,24 +10,21 @@ addTextView("  ") addTextView("Network Functions in Ankulua settings must be ena
 
 dialogShow("Important")
 
-mkdir(localPath .. "image");
-mkdir(localPath .. "image/1280x720");
-mkdir(localPath .. "lib");
-mkdir(localPath .. "lib/dialogs");
-
 function assetSetup ()
+  -- Make any directories that are missing
+  mkdir(localPath .. "image");
+  mkdir(localPath .. "image/1280x720");
+  mkdir(localPath .. "lib");
+  mkdir(localPath .. "lib/dialogs");
+  mkdir(localPath .. "lib/setup");
+
   -- Download Scripts
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/main.lua", localPath .."main.lua")
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua", localPath .."/lib/version.lua")
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/regions.lua", localPath .."/lib/regions.lua")
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/gearFarm.lua", localPath .."/lib/gearFarm.lua")
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/dialogs/gearFarm.lua", localPath .."/lib/dialogs/gearFarm.lua")
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/dialogs/gui.lua", localPath .."/lib/dialogs/gui.lua")
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/imageupdater.lua", localPath .."imageupdater.lua")
+  local scripts = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownload.lua"))
+  scripts ();
 
   -- Download images
   dofile(localPath .. "imageupdater.lua")
-  scriptExit("Scripts assets downloaded!")
+  scriptExit("SinBot assets downloaded!")
 end
 
 assetSetup ()

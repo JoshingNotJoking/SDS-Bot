@@ -7,7 +7,7 @@
 localPath = scriptPath()
 imagePath = (localPath .. "image/1280x720/")
 
-function updateImages()
+function downloadImages()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/image/1280x720/areaQuestReward.png", imagePath .."areaQuestReward.png");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/image/1280x720/areaRepeatResults.png", imagePath .."areaRepeatResults.png");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/image/1280x720/areaStageSelect.png", imagePath .."areaStageSelect.png");
@@ -48,4 +48,4 @@ function updateImages()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/image/1280x720/salvageSuccessButton.png", imagePath .."salvageSuccessButton.png");
 end
 
-updateImages ()
+downloadImages ()
