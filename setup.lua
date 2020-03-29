@@ -19,12 +19,12 @@ function assetSetup ()
   mkdir(localPath .. "lib/setup");
 
   -- Download Scripts
-  local scripts = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownload.lua"))
+  local scripts = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownloader.lua"))
   scripts ();
   toast ("Scripts Downloaded");
 
   -- Download images
-  local images = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownload.lua"))
+  local images = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownloader.lua"))
   images ();
   toast ("Images Downloaded");
 
