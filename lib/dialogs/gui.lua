@@ -1,7 +1,7 @@
 -- ========================
 -- Graphical User Interface
 -- ========================
-introPrompt ()
+function introPrompt ()
   dialogInit()
   -- GUI
   addTextView("  ") addTextView("What would you like to do?") newRow()
@@ -16,9 +16,10 @@ introPrompt ()
   else
       scriptExit("Error", "No action seems to be choosen. Please report this issue.")
   end
+
 end
 
-updatePrompt ()
+function updatePrompt ()
   dialogInit()
   -- GUI
   addTextView("  ") addTextView("Would you like to update?") newRow()
