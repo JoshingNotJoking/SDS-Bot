@@ -7,6 +7,7 @@ function introPrompt ()
   addTextView("  ") addTextView("What would you like to do?") newRow()
   addRadioGroup("session", 1)
   addRadioButton("Gear Farm", 1)
+  addRadioButton("Guild Boss", 2)
   addTextView("  ") newRow()
   dialogShow("Welcome to SinBot")
 end
@@ -20,6 +21,16 @@ function updatePrompt ()
   addRadioButton("No, update later", 2)
   addTextView("  ") newRow()
   dialogShow("Update Available")
+end
+
+function guildBossPrompt ()
+  dialogInit()
+  -- GUI
+  addTextView("  ") addTextView("Which Guild Boss Difficulty?") newRow()
+  addRadioGroup("bossDifficulty", 1)
+  addRadioButton("Hard", 1)
+  addTextView("  ") newRow()
+  dialogShow("Guild Boss")
 end
 
 function gearFarmPrompt ()
