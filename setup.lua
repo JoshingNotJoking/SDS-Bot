@@ -1,6 +1,9 @@
 -- ========================
 -- SinBot Update and Setup
 -- ========================
+localPath = scriptPath();
+luaLib = loadstring(httpGet("https://raw.githubusercontent.com/mercobots/luaLib/master/luaLib.lua"));
+luaLib();
 
 dialogInit()
 -- GUI
@@ -11,8 +14,8 @@ dialogShow("Important")
 function assetSetup ()
   -- Make any directories that are missing
   toast ("Creating missing directories (if any)");
-  local dir = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/directoryCreator.lua"));
-  dir();
+  local directories = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/directoryCreator.lua"));
+  directories();
 
   -- Download Scripts
   toast ("Downloading Scripts");

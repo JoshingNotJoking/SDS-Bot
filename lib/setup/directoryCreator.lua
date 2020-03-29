@@ -2,10 +2,8 @@
 -- Directory Creator
 -- ========================
 localPath = scriptPath();
-luaLib = loadstring(httpGet("https://raw.githubusercontent.com/mercobots/luaLib/master/luaLib.lua"))
-luaLib()
 
-makeDirectories ()
+createDirectories ()
   mkdir(localPath .. "images");
   mkdir(localPath .. "images/1280x720");
   mkdir(localPath .. "lib");
@@ -13,4 +11,4 @@ makeDirectories ()
   mkdir(localPath .. "lib/setup");
 end
 
-makeDirectories ()
+createDirectories ();
