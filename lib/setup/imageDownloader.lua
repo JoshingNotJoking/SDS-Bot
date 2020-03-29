@@ -2,6 +2,8 @@
 -- Image Downloader
 -- ========================
 -- Credit to Palbot for the implementation: https://github.com/Paladiex/Palbot
+localPath = scriptPath()
+imagesPath = (localPath .. "images/1280x720/")
 
 function downloadimages()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/areaQuestReward.png", imagesPath .."areaQuestReward.png");
