@@ -1,6 +1,7 @@
 -- ========================
 -- Directory Creator
 -- ========================
+localPath = scriptPath();
 
 function createDirectories ()
   mkdir(localPath .. "images");

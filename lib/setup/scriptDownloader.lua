@@ -2,6 +2,7 @@
 -- Script Downloader
 -- ========================
 -- Credit to Palbot for the implementation: https://github.com/Paladiex/Palbot
+localPath = scriptPath();
 
 function downloadScripts()
   -- /
