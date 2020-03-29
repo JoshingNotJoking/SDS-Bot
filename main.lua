@@ -31,7 +31,6 @@ end
 -- Load helpers & functions (This may be expensive for the interpreter)
 dofile(localPath .. "lib/regions.lua")
 dofile(localPath .. "lib/gearFarm.lua")
-dofile(localPath .. "lib/scriptUpdater.lua")
 dofile(localPath .. "lib/dialogs/gui.lua")
 
 if gearSelection == 1 then gearSelection = "gearAttack"
