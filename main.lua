@@ -57,7 +57,7 @@ end
 
 if session == 2 then
   guildBossPrompt ();
-  if bossDifficulty == 1 then {
+  if bossDifficulty == 1 then
     scriptExit("Coming Soon!");
-  }
+  end
 end
