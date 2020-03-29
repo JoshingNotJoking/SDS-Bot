@@ -17,8 +17,8 @@ function downloadScripts()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/dialogs/gearFarm.lua", localPath .."/lib/dialogs/gearFarm.lua");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/dialogs/gui.lua", localPath .."/lib/dialogs/gui.lua");
   -- /lib/setup
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownload.lua", localPath .."/lib/setup/imageDownload.lua");
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownload.lua", localPath .."/lib/setup/scriptDownload.lua");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownloader.lua", localPath .."/lib/setup/imageDownloader.lua");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownloader.lua", localPath .."/lib/setup/scriptDownloader.lua");
 end
 
 downloadScripts ();
