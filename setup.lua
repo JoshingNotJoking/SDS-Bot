@@ -1,8 +1,6 @@
-luaLib = loadstring(httpGet("https://raw.githubusercontent.com/mercobots/luaLib/master/luaLib.lua"))
-localPath = scriptPath()
-imgPath = localPath .. "images/1280x720"
-setImagePath(imgPath)
-luaLib()
+-- ========================
+-- SinBot Update and Setup
+-- ========================
 
 dialogInit()
 -- GUI
@@ -12,18 +10,18 @@ dialogShow("Important")
 
 function assetSetup ()
   -- Make any directories that are missing
-  mkdir(localPath .. "images");
-  mkdir(localPath .. "images/1280x720");
-  mkdir(localPath .. "lib");
-  mkdir(localPath .. "lib/dialogs");
-  mkdir(localPath .. "lib/setup");
+  toast ("Creating missing directories (if any)");
+  local directories = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/directoryCreator.lua"))
+  directories ();
 
   -- Download Scripts
+  toast ("Downloading Scripts");
   local scripts = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/scriptDownloader.lua"))
   scripts ();
   toast ("Scripts Downloaded");
 
   -- Download images
+  toast ("Downloading Images", 3);
   local images = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownloader.lua"))
   images ();
   toast ("Images Downloaded");
