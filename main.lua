@@ -8,7 +8,7 @@
 localPath = scriptPath();
 getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/version.lua"));
 latestVersion = getNewestVersion();
-currentVersion = dofile(localPath .."/lib/version.lua");
+currentVersion = "dofile(localPath .."/lib/setup/version.lua");"
 imgPath = localPath .. "images/1280x720"
 setImagePath(imgPath);
 
