@@ -4,7 +4,7 @@ setImagePath(imgPath)
 
 dialogInit()
 -- GUI
-addTextView("  ") addTextView("Network Functions in Ankulua settings must be enabled for this to work") newRow()
+addTextView("  ") addTextView("Network Functions in Ankulua settings must be enabled for this to work.") newRow()
 addTextView("  ") addTextView("Create the following directories before running this script:") newRow()
 addTextView("  ") addTextView("- image") newRow()
 addTextView("  ") addTextView("- image/1280x720") newRow()
