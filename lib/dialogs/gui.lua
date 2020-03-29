@@ -4,11 +4,11 @@
 function introPrompt ()
   dialogInit()
   -- GUI
-  addTextView("  ") addTextView("Please select an option for this session.") newRow()
+  addTextView("  ") addTextView("What would you like to do?") newRow()
   addRadioGroup("session", 1)
   addRadioButton("Gear Farm", 1)
   addTextView("  ") newRow()
-  dialogShow("What would you like to do?")
+  dialogShow("Welcome to SinBot")
 end
 
 function updatePrompt ()
