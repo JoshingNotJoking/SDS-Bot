@@ -1,7 +1,7 @@
 -- ========================
 -- Directory Creator
 -- ========================
-
+localPath = scriptPath();
 luaLib = loadstring(httpGet("https://raw.githubusercontent.com/mercobots/luaLib/master/luaLib.lua"))
 luaLib()
 
