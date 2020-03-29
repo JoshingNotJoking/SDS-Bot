@@ -40,6 +40,7 @@ dofile(localPath .. "lib/gearSalvage.lua");
 introPrompt ();
 
 if session == 1 then
+  gearFarmPrompt ();
   while true do
     gearFarm ();
     -- Clear inventory to continue farming
