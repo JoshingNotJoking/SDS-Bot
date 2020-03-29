@@ -6,6 +6,7 @@ dialogInit()
 -- GUI
 addTextView("  ") addTextView("Please create the following directories before running this scrip:") newRow()
 addTextView("  ") addTextView("- image") newRow()
+addTextView("  ") addTextView("- image/1280x720") newRow()
 addTextView("  ") addTextView("- lib") newRow()
 addTextView("  ") addTextView("- lib/dialogs") newRow()
 
