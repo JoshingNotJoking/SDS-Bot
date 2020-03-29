@@ -31,11 +31,12 @@ end
 
 automaticUpdates ();
 
--- Load helpers & functions (This may be expensive for the interpreter)
+-- Load helpers & functions (This may be expensive for the interpreter, refactor later)
 dofile(localPath .. "lib/regions.lua");
 dofile(localPath .. "lib/gearFarm.lua");
+dofile(localPath .. "lib/gearSalvage.lua");
 
--- Ask what user wants to do
+-- Ask what user wants to do this session
 introPrompt ();
 
 if gearSelection == 1 then gearSelection = "gearAttack"
@@ -46,50 +47,17 @@ elseif gearSelection == 5 then gearSelection = "gearCritRes"
 elseif gearSelection == 6 then gearSelection = "gearRecovery"
 end
 
-function gearSalvage ()
-  closeEquipmentFull:existsClick(Pattern("closeEquipmentFull.png"));
-  menuBackArrow:existsClick(Pattern("menuBackArrow.png"));
-  tavernGlobal:existsClick(Pattern("tavernGlobalButton.png"));
-  if salvageIcon:existsClick(Pattern("salvageIcon.png")) then
-    repeat
-      wait(.2);
-    until registerAllButton:exists(Pattern("registerAllButton.png"));
-  end
-  if registerAllButton:existsClick(Pattern("registerAllButton.png")) then
-    gearCommonIcon:existsClick(Pattern("gearCommonIcon.png"));
-    wait(.2);
-    gearUncommonIcon:existsClick(Pattern("gearUncommonIcon.png"));
-    wait(.2);
-    gearRareIcon:existsClick(Pattern("gearRareIcon.png"));
-    wait(.2);
-    gearSuperRareIcon:existsClick(Pattern("gearSuperRareIcon.png"));
-    wait(.2);
-    gearApplyButton:existsClick(Pattern("gearApplyButton.png"));
-  end
-  repeat
-    if salvageButton:existsClick(Pattern("salvageButton.png")) then
-      salvageConfirmButton:existsClick(Pattern("salvageConfirmButton.png"));
-      repeat
-        wait(.1);
-      until salvageSuccessButton:exists(Pattern("salvageSuccessButton.png"));
-      salvageSuccessButton:existsClick(Pattern("salvageSuccessButton.png"));
-    end
-    if registerAllButton:existsClick(Pattern("registerAllButton.png")) then
-      wait(.2);
-      gearApplyButton:existsClick(Pattern("gearApplyButton.png"));
-    end
-  until salvageMissingEquip:exists(Pattern("salvageMissingEquip.png"));
-end
-
-while true do
-  gearFarm ();
-  -- Clear inventory to continue farming
-  if areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png")) then
-    toast ("Equipment inventory full!");
-    if gearCommon == true or gearUncommon == true or gearRare == true or gearSuperRare == true then
-      gearSalvage();
-    else
-      scriptExit("Equipment inventory full!");
+if session == 1 then
+  while true do
+    gearFarm ();
+    -- Clear inventory to continue farming
+    if areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png")) then
+      toast ("Equipment inventory full!");
+      if gearCommon == true or gearUncommon == true or gearRare == true or gearSuperRare == true then
+        gearSalvage();
+      else
+        scriptExit("Equipment inventory full!");
+      end
     end
   end
 end
