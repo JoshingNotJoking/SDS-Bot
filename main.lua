@@ -39,14 +39,6 @@ dofile(localPath .. "lib/gearSalvage.lua");
 -- Ask what user wants to do this session
 introPrompt ();
 
-if gearSelection == 1 then gearSelection = "gearAttack"
-elseif gearSelection == 2 then gearSelection = "gearDefense"
-elseif gearSelection == 3 then gearSelection = "gearHealth"
-elseif gearSelection == 4 then gearSelection = "gearCrit"
-elseif gearSelection == 5 then gearSelection = "gearCritRes"
-elseif gearSelection == 6 then gearSelection = "gearRecovery"
-end
-
 if session == 1 then
   while true do
     gearFarm ();
