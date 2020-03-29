@@ -3,8 +3,6 @@
 -- ========================
 -- Credit to Palbot for the implementation: https://github.com/Paladiex/Palbot
 
-localPath = scriptPath();
-
 function downloadScripts()
   -- /
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/main.lua", localPath .."main.lua");

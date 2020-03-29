@@ -12,7 +12,7 @@ addTextView("  ") addTextView("Network Functions in Ankulua settings must be ena
 dialogShow("Important")
 
 function assetSetup ()
-  -- Make any directories that are missing
+  -- Create any directories that are missing
   toast ("Creating missing directories (if any)");
   local directories = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/directoryCreator.lua"));
   directories();
