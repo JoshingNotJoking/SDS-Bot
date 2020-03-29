@@ -25,6 +25,7 @@ function assetSetup ()
 
   -- Download images
   local images = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/imageDownload.lua"))
+  images ();
   toast ("Images Downloaded");
 
   scriptExit("Update complete!")
