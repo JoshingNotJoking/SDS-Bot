@@ -42,7 +42,15 @@ function downloadimages()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/salvageConfirmButton.png", imagesPath .."salvageConfirmButton.png");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/salvageIcon.png", imagesPath .."salvageIcon.png");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/salvageMissingEquip.png", imagesPath .."salvageMissingEquip.png");
-  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/salvageSuccessButton.png", imagesPath .."salvageSuccessButton.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/lowStaminaPrompt.png", imagesPath .."lowStaminaPrompt.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/lowStaminaButton.png", imagesPath .."lowStaminaButton.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/staminaRefillButton.png", imagesPath .."staminaRefillButton.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamArrow.png", imagesPath .."teamArrow.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamOne.png", imagesPath .."teamOne.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamTwo.png", imagesPath .."teamTwo.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamThree.png", imagesPath .."teamThree.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamFour.png", imagesPath .."teamFour.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamFive.png", imagesPath .."teamFive.png");
 end
 
 downloadimages ()

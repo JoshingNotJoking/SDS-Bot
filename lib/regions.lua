@@ -1,6 +1,6 @@
 areaTavern = Region(1170, 421, 152, 152);
 areaBattle = Region(639, 150, 152, 152);
-areaRepeatResults = Region(553, 75, 160, 90);
+areaRepeatResults = Region(666, 209, 90, 120);
 areaStageSelect = Region(455, 135, 90, 90);
 areaQuestReward = Region(557, 90, 160, 90);
 areaInventoryPrompt = Region(592, 248, 90, 90);
