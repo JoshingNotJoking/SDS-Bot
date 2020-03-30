@@ -4,7 +4,10 @@
 --------------------------------------------------------------------------
 -- Credit to Palbot & Swar-X for implementation and structure inspiration.
 
+-- ===================
 -- Basic Configuration
+-- ===================
+
 localPath = scriptPath();
 getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/lib/setup/version.lua"));
 latestVersion = getNewestVersion();
@@ -31,11 +34,29 @@ end
 
 automaticUpdates();
 
+
+-- =========
+-- Variables
+-- =========
+refillStaminaLimit = 0
+
+-- Statistics
+failedGuildBossRuns = 0
+
 -- Load helpers & functions (This may be expensive for the interpreter, refactor later)
 dofile(localPath .. "lib/regions.lua");
 
 -- Ask what user wants to do this session
 introPrompt();
+
+-- Refill stamina when empty
+if lowStaminaPrompt:exists(Pattern("lowStaminaPrompt.png")) then
+  lowStaminaButton:existsClick(Pattern("lowStaminaButton.png"));
+  repeat
+    wait(.1);
+  until staminaRefillButton:exists(Pattern("staminaRefillButton.png"));
+  staminaRefillButton:existsClick(Pattern("staminaRefillButton.png"));
+end
 
 if session == 1 then
   gearFarmPrompt();

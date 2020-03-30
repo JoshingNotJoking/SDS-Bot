@@ -27,7 +27,7 @@ function guildBossPrompt ()
   dialogInit()
   spinnerGBTeamReturn = {"Team 1","Team 2","Team 3","Team 4","Team 5" }
 
-  -- GUI
+  -- GUIs
   addTextView("  ") addTextView("Which Guild Boss Difficulty?") newRow()
   addRadioGroup("bossDifficulty", 1)
   addRadioButton("Hard", 1)
