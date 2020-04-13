@@ -8,6 +8,7 @@ function introPrompt ()
   addRadioGroup("session", 1)
   addRadioButton("Gear Farm", 1)
   addRadioButton("Guild Boss", 2)
+  addRadioButton("Raid Farm", 3)
   addTextView("  ") newRow()
   dialogShow("Welcome to SinBot")
 end
@@ -36,6 +37,16 @@ function guildBossPrompt ()
   addTextView("(Please confirm they're geared)") newRow()
   addSpinnerIndex("guildBossTeamSelection", spinnerGBTeamReturn, "Team 1") addTextView("  ") newRow()
   dialogShow("Guild Boss")
+end
+
+function raidFarmPrompt ()
+  dialogInit()
+  -- GUI
+  addTextView("  ") addTextView("SinBot will automatically accept any Raid invitations sent and battle for you.") newRow()
+  addTextView("  ") newRow()
+  addTextView("  ") addTextView("Please confirm your raid teams are geared and capable of autoing.") newRow()
+  addTextView("  ") newRow()
+  dialogShow("Raid Farm")
 end
 
 function gearFarmPrompt ()

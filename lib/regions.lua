@@ -1,11 +1,13 @@
 areaTavern = Region(1170, 421, 152, 152);
 areaBattle = Region(639, 150, 152, 152);
 areaRepeatResults = Region(666, 209, 90, 120);
+areaRepeatResultsAlt = Region(574, 307, 90, 120);
 areaStageSelect = Region(455, 135, 90, 90);
 areaQuestReward = Region(557, 90, 160, 90);
 areaInventoryPrompt = Region(592, 248, 90, 90);
 gearGo =  Region(716, 285, 90, 90);
 gearStart = Region(717, 282, 90, 90);
+gearEquipSalvage = Region(590, 367, 90, 120);
 tavernGlobal = Region(434, 634, 90, 90);
 deathMatchPrompt = Region(497, 386, 120, 120);
 closeDeathMatch = Region(509, 589, 120, 120);

@@ -6,7 +6,7 @@ function gearFarm ()
   elseif gearSelection == 5 then gearSelection = "gearCritRes"
   elseif gearSelection == 6 then gearSelection = "gearRecovery"
   end
-  
+
   if areaTavern:existsClick(Pattern("battleButton.png")) then
     wait(.5);
     areaBattle:existsClick(Pattern("battleEquipButton.png"));
@@ -28,12 +28,12 @@ function gearFarm ()
 
           repeat
             wait(.2);
-          until areaRepeatResults:exists(Pattern("areaRepeatResults.png")) or areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png"));
+          until areaRepeatResults:exists(Pattern("areaRepeatResults.png")) or areaRepeatResultsAlt:exists(Pattern("areaRepeatResultsAlt.png")) or areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png"));
         else
           scriptExit("Please unlock hard stage before continuing");
         end
 
-        if areaRepeatResults:exists(Pattern("areaRepeatResults.png")) then
+        if areaRepeatResults:exists(Pattern("areaRepeatResults.png")) or areaRepeatResultsAlt:exists(Pattern("areaRepeatResultsAlt.png")) then
           closeRepeatResults:existsClick(Pattern("closeRepeatResults.png"));
         end
 
@@ -48,6 +48,7 @@ function gearFarm ()
     end
   end
 
+  gearEquipSalvage:existsClick(Pattern("gearEquipSalvage.png"));
   completeGearButton:existsClick(Pattern("completeGearButton.png"));
   continueQuestButton:existsClick(Pattern("continueQuestButton.png"));
 
