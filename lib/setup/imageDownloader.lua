@@ -53,6 +53,7 @@ function downloadimages()
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/teamFive.png", imagesPath .."teamFive.png");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/gearEquipSalvage.png", imagesPath .."gearEquipSalvage.png");
   httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/areaRepeatResultsAlt.png", imagesPath .."areaRepeatResultsAlt.png");
+  httpDownload("https://raw.githubusercontent.com/JoshingNotJoking/SinBot/master/images/1280x720/lowStaminaButtonAlt.png", imagesPath .."lowStaminaButtonAlt.png");
 end
 
 downloadimages ()

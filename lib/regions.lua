@@ -39,4 +39,5 @@ teamFour = Region(568, 124, 140, 70);
 teamFive = Region(567, 124, 140, 70);
 lowStaminaPrompt = Region(673, 291, 100, 90);
 lowStaminaButton = Region(673, 291, 100, 90);
+lowStaminaButtonAlt = Region(653, 370, 100, 90);
 staminaRefillButton = Region(673, 291, 100, 90);

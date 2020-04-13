@@ -50,8 +50,9 @@ dofile(localPath .. "lib/regions.lua");
 introPrompt();
 
 -- Refill stamina when empty
-if lowStaminaPrompt:exists(Pattern("lowStaminaPrompt.png")) then
+if lowStaminaPrompt:exists(Pattern("lowStaminaPrompt.png")) or lowStaminaButtonAlt:exists(Pattern("lowStaminaButtonAlt.png")) then
   lowStaminaButton:existsClick(Pattern("lowStaminaButton.png"));
+  lowStaminaButtonAlt:existsClick(Pattern("lowStaminaButtonAlt.png"));
   repeat
     wait(.1);
   until staminaRefillButton:exists(Pattern("staminaRefillButton.png"));
