@@ -49,21 +49,20 @@ dofile(localPath .. "lib/regions.lua");
 -- Ask what user wants to do this session
 introPrompt();
 
--- Refill stamina when empty
-if lowStaminaPrompt:exists(Pattern("lowStaminaPrompt.png")) or lowStaminaButtonAlt:exists(Pattern("lowStaminaButtonAlt.png")) then
-  lowStaminaButton:existsClick(Pattern("lowStaminaButton.png"));
-  lowStaminaButtonAlt:existsClick(Pattern("lowStaminaButtonAlt.png"));
-  repeat
-    wait(.1);
-  until staminaRefillButton:exists(Pattern("staminaRefillButton.png"));
-  staminaRefillButton:existsClick(Pattern("staminaRefillButton.png"));
-end
-
 if session == 1 then
   gearFarmPrompt();
   dofile(localPath .. "lib/gearFarm.lua");
   dofile(localPath .. "lib/gearSalvage.lua");
   while true do
+    -- Refill stamina when empty
+    if lowStaminaPrompt:exists(Pattern("lowStaminaPrompt.png")) or lowStaminaButtonAlt:exists(Pattern("lowStaminaButtonAlt.png")) then
+      lowStaminaButton:existsClick(Pattern("lowStaminaButton.png"));
+      lowStaminaButtonAlt:existsClick(Pattern("lowStaminaButtonAlt.png"));
+      repeat
+        wait(.1);
+      until staminaRefillButton:exists(Pattern("staminaRefillButton.png"));
+      staminaRefillButton:existsClick(Pattern("staminaRefillButton.png"));
+    end
     gearFarm();
     -- Clear inventory to continue farming
     if areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png")) then
