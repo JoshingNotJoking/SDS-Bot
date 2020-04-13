@@ -86,10 +86,10 @@ if session == 2 then
   end
 end
 
-if session == 3 then
-  raidFarmPrompt();
-  dofile(localPath .. "lib/raidFarm.lua");
-  while true do
-    raidFarm();
-  end
-end
+-- if session == 3 then
+--   raidFarmPrompt();
+--   dofile(localPath .. "lib/raidFarm.lua");
+--   while true do
+--     raidFarm();
+--   end
+-- end

@@ -39,15 +39,15 @@ function guildBossPrompt ()
   dialogShow("Guild Boss")
 end
 
-function raidFarmPrompt ()
-  dialogInit()
-  -- GUI
-  addTextView("  ") addTextView("SinBot will automatically accept any Raid invitations sent and battle for you.") newRow()
-  addTextView("  ") newRow()
-  addTextView("  ") addTextView("Please confirm your raid teams are geared and capable of autoing.") newRow()
-  addTextView("  ") newRow()
-  dialogShow("Raid Farm")
-end
+-- function raidFarmPrompt ()
+--   dialogInit()
+--   -- GUI
+--   addTextView("  ") addTextView("SinBot will automatically accept any Raid invitations sent and battle for you.") newRow()
+--   addTextView("  ") newRow()
+--   addTextView("  ") addTextView("Please confirm your raid teams are geared and capable of autoing.") newRow()
+--   addTextView("  ") newRow()
+--   dialogShow("Raid Farm")
+-- end
 
 function gearFarmPrompt ()
   dialogInit()
