@@ -28,7 +28,7 @@ function gearFarm ()
 
           repeat
             wait(.2);
-          until areaRepeatResults:exists(Pattern("areaRepeatResults.png")) or areaRepeatResultsAlt:exists(Pattern("areaRepeatResultsAlt.png")) or areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png"));
+          until areaRepeatResults:exists(Pattern("areaRepeatResults.png")) or areaRepeatResultsAlt:exists(Pattern("areaRepeatResultsAlt.png")) or areaInventoryPrompt:exists(Pattern("areaInventoryPrompt.png")) or lowStaminaPrompt:exists(Pattern("lowStaminaPrompt.png")) or lowStaminaButtonAlt:exists(Pattern("lowStaminaButtonAlt.png"));
         else
           scriptExit("Please unlock hard stage before continuing");
         end
